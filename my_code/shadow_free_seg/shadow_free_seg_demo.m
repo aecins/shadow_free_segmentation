@@ -60,14 +60,6 @@ im              = imread('./input_image.png');                              % Re
 im              = im2double(im);
 [yRes, xRes, ~] = size(im);
 
-% Compute Berkeley edges
-% NOTE: here we are loading precomputed Berkeley edges for the sake of
-% speed but if you have your own image just compute the edges by
-% uncommenting the line below.
-fprintf('Computing Berkeley edges...\n');
-% load('input_image_grad.mat');                                               % Load Berkeley edges
-[edgeGrad, ~]   = pbCGTG(im);                                               % Compute Berkeley edges
-
 % Choose fixation point
 fig_select_fixation = figure;
 imshow(im);
@@ -76,6 +68,14 @@ title('Select a fixation point inside the object');
 fix_x = round(fix_x);
 fix_y = round(fix_y);
 close(fig_select_fixation);
+
+% Compute Berkeley edges
+% NOTE: here we are loading precomputed Berkeley edges for the sake of
+% speed but if you have your own image just compute the edges by
+% uncommenting the line below.
+fprintf('Computing Berkeley edges...\n');
+% load('input_image_grad.mat');                                               % Load Berkeley edges
+[edgeGrad, ~]   = pbCGTG(im);                                               % Compute Berkeley edges
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initial segmentation
