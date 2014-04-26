@@ -51,9 +51,9 @@ filterElongateStr = strrep(filterElongateStr, '.', 'x');
 
 % Texture mode used
 texMode = [];
-% texMode{1} = sprintf('tex_texton128_malik_%s_%s_imagespec_density5', filterScaleStr, filterElongateStr);
+texMode{1} = sprintf('tex_texton128_malik_%s_%s_imagespec_density5', filterScaleStr, filterElongateStr);
 % texMode{1} = sprintf('tex_texton128_malik_%s_%s_imagespec_intensity', filterScaleStr, filterElongateStr);
-texMode{1} = 'tex_lbp_pts8_rad1_u2_intensity';
+% texMode{1} = 'tex_lbp_pts8_rad1_u2_intensity';
 
 % Model file name
 modelFileName = sprintf('%d_%d_%d_%d_%d_%s%s',...
