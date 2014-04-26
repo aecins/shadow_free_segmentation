@@ -1,0 +1,7 @@
+close all
+clear all
+
+P = 16;
+R = 2;
+mappingMode = 'u2';
+mapping = getmapping(P, mappingMode);            % We use rotationally invariant 
