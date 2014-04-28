@@ -5,7 +5,7 @@ This software package provides a MATLAB implementation of the foreground backgro
 
 A. Ecins, C. Fermüller, and Y.Aloimonos, "Shadow Free Segmentation in Still Images using Local Density Measure", ICCP 2014
 
-Required 3rd part packages
+Required 3rd party packages
 ==========================
 
 There is a number of 3rd party software packages that are used by this software:
